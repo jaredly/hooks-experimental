@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset=utf8>
+<title>React Hooks!</title>
+<body>
+<div id="root"></div>
+<script type="text/javascript" src="index.js"></script>
+  <script>
+    const ws = new WebSocket("ws://localhost:3010/ws");
+
+    ws.addEventListener("open", event => {
+      ws.send("hello");
+    });
+
+    ws.addEventListener("message", event => {
+      console.log(event.data);
+      if (event.data !== "hello") {
+        const data = JSON.parse(event.data);
+        if (data.error) {
+          const errorElement = document.createElement("pre");
+          errorElement.innerText = `${data.error}`;
+          document.body.appendChild(errorElement);
+        } else {
+          window.location.reload();
+        }
+      }
+    });
+  </script>
+</body>
+
