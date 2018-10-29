@@ -1,6 +1,7 @@
 let x = 10;
 let y = <div id="hello" />;
 
+/* [@lint.enforceLinearity] */
 [@bs.module "react"] external useState: 'a => ('a, (. 'a) => unit) = "";
 [@bs.module "react"]
 external createElement:
