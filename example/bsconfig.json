@@ -1,0 +1,9 @@
+{
+  "name": "hooks-example",
+  "sources": "src",
+  "reason": {
+    "react-jsx": 2
+  },
+  "bs-dependencies": ["reason-react", "hooks-experimental"],
+  "refmt": 3
+}

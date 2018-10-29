@@ -1,15 +1,16 @@
 {
-  "name": "hooks-experimental",
-  "version": "0.0.0-alpha",
+  "name": "hooks-example",
   "dependencies": {
     "bs-platform": "^4.0.7",
     "fpack": "^0.6.8",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
-    "reason-react": "^0.5.3"
+    "reason-react": "^0.5.3",
+    "hooks-experimental": "file:../"
   },
   "scripts": {
-    "build": "bsb -make-world"
+    "start": "bsb -make-world -w",
+    "pack": "fpack serve lib/js/src/App.js -p 3010"
   },
   "resolutions": {
     "**/react": "16.7.0-alpha.0",
