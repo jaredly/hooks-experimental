@@ -37,11 +37,13 @@ let createElement:
 
 [@bs.module "react"] external useState: 'a => ('a, (. 'a) => unit) = "";
 
-[@bs.module "react"] external useEffect: ((unit, unit) => unit) => unit = "";
+
+[@bs.module "react"] external useEffect: ((unit) => ((. unit) => unit)) => unit = "";
 [@bs.module "react"]
-external useMutationEffect: ((unit, unit) => unit) => unit = "";
+external useMutationEffect: ((unit) => ((. unit) => unit)) => unit = "";
 [@bs.module "react"]
-external useLayoutEffect: ((unit, unit) => unit) => unit = "";
+external useLayoutEffect: ((unit) => ((. unit) => unit)) => unit = "";
+
 
 [@bs.module "react"]
 external useEffectWithoutCleanup: (unit => unit) => unit = "useEffect";
