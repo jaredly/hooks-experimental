@@ -35,8 +35,8 @@ external useDomRef: unit => {. "current": option(Dom.node)} = "useRef";
 
 [@bs.module "react"]
 external useReducer:
-  (~reducer: ('state, 'action) => 'state, ~initial: 'state) =>
-  ('state, 'action => unit) =
+  (~reducer: (. 'state, 'action) => 'state, ~initial: 'state) =>
+  ('state, (. 'action) => unit) =
   "";
 
 [@bs.module "react"]
