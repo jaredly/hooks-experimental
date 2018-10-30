@@ -1,6 +1,6 @@
 {
   "name": "hooks-experimental",
-  "version": "0.0.0-alpha",
+  "version": "0.0.0-alpha.0",
   "dependencies": {
     "bs-platform": "^4.0.7",
     "fpack": "^0.6.8",
